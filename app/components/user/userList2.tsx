@@ -39,12 +39,19 @@ export default function UserList2(){
 
     const {username, email} = inputs;
 
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>)=>{
+        setInputs({
+            ...inputs,
+            [e.target.name] : e.target.value
+        })
+    }
+
 
     return(
         <div>
             <hr className="m-5" />
             {/* user를 등록할 input => CreateUser 컴포넌트 생성 */}
-            <CreateUser username={username} email={email} />
+            <CreateUser username={username} email={email} onChange={onChange} />
 
             {/* 출력에 필요한 컴포넌트 UserList1 생성 */}
             <UserList1 users={users} />
