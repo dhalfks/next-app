@@ -5,6 +5,7 @@ import Start from "./components/Start";
 import Counter from "./components/Counter";
 import Counter2 from "./components/Counter2";
 import HelloProps from "./components/HelloProps";
+import InputSample from "./components/inputSample";
 
 export default function Home() {
   return (
@@ -17,6 +18,20 @@ export default function Home() {
         <Counter2 num={100} />
 
         <HelloProps name={"홍길동"} age={20} />
+        <hr />
+        <InputSample />
+
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
     </div>
   );
