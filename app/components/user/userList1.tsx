@@ -8,7 +8,6 @@ type userProps = {
 export default function UserList1({users}:userProps){
     return(
         <div>
-            <hr />
             <h2 className="font-bold m-2">User List</h2>
             {
                 users.map( user => (

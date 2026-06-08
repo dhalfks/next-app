@@ -26,3 +26,10 @@ user CRUD
 3. User 컴포넌트 생성 => user의 객체를 props로 받아서 컴포넌트 생성
     => user props 에 대한 타입을 정의
     => 출력
+
+4. CreateUser 컴포넌트 생성 => input * 2 / button 1개
+    => userList2 CreateUser 사용할 inputs 의 useState 생성
+    => props로 username, email 전달
+    => CreateUser props 받기 => props type 정의 => value 설정
+
+
