@@ -31,5 +31,8 @@ user CRUD
     => userList2 CreateUser 사용할 inputs 의 useState 생성
     => props로 username, email 전달
     => CreateUser props 받기 => props type 정의 => value 설정
+    => onChage / onCreate => user 객체를 생성 => users 추가
 
+5. UserList2 삭제 기능 추가 => onRemove 함수 생성 후 => 함수 전달
+    => UserList1 props로 전달 => User props로 전달
 
