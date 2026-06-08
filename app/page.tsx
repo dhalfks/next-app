@@ -6,6 +6,7 @@ import Counter from "./components/Counter";
 import Counter2 from "./components/Counter2";
 import HelloProps from "./components/HelloProps";
 import InputSample from "./components/inputSample";
+import InputSample2 from "./components/inputSample2";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
         <InputSample />
 
         <hr />
+        <InputSample2 />
+        
         <hr />
         <hr />
         <hr />
