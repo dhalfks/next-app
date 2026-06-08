@@ -35,4 +35,9 @@ user CRUD
 
 5. UserList2 삭제 기능 추가 => onRemove 함수 생성 후 => 함수 전달
     => UserList1 props로 전달 => User props로 전달
+    => x 버튼에 onClick 으로 onRemove 함수 실행
+
+6. UserList2 토글 기능 추가 => onToggle 함수 생성 후 => 함수 전달
+    => UserList1 props로 전달 => User props로 전달
+    => <b> 태그에 onClick 으로 onToggle 함수 실행
 
