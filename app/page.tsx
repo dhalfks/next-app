@@ -1,5 +1,4 @@
 "use client" // 상위폴더에서 관리
-import Image from "next/image";
 import Hello from "./components/Hello";
 import Start from "./components/Start";
 import Counter from "./components/Counter";

@@ -1,7 +1,6 @@
-import { useRef, useState } from "react"
+import { useMemo, useRef, useState } from "react"
 import UserList1 from "./userList1";
 import CreateUser from "./createUser";
-import next from "next";
 
 export default function UserList2(){
     // users의 변화를 주기 위해 (등록, 삭제, 수정) useState() 관리
@@ -76,6 +75,28 @@ export default function UserList2(){
         setUsers(users.filter(user => user.id !== id));
     }
 
+    // 토글 설정
+    const onToggle = (id: number)=>{
+        // 클릭한 유저의 id 값의 active를 자신의 값과 반대로 설정
+        setUsers(
+            users.map(user => user.id === id ? {...user, active: !user.active} : user)
+        )
+    }
+
+    // 활성 사용자수 설정 : active가 true인 인원수
+    const countActiveUser = ()=>{
+        return users.filter(user => user.active).length;
+    }
+
+    const activeCount = useMemo(()=> countActiveUser(), [users]);
+
+    // 전체 인원수 설정
+    const countUser = () => {
+        return users.length;
+    }
+
+    const count = useMemo(()=> countUser(), [users]);
+
 
     return(
         <div>
@@ -84,7 +105,9 @@ export default function UserList2(){
             <CreateUser username={username} email={email} onChange={onChange} onCreate={onCreate} />
 
             {/* 출력에 필요한 컴포넌트 UserList1 생성 */}
-            <UserList1 users={users} onRemove={onRemove} />
+            <UserList1 users={users} onRemove={onRemove} onToggle={onToggle} />
+
+            <div>활성인원수 : {activeCount} / {count}명</div>  
         </div>
     )
 }
